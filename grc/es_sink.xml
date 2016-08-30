@@ -121,6 +121,14 @@
     <type>message</type>
     <optional>1</optional>
   </sink>
+  
+  <source>
+    <name>in</name>
+    <type>$type</type>
+    <vlen>1</vlen>
+    <nports>$num_streams</nports>
+    <optional>1</optional>
+  </source>
 
   <source>
     <name>nconsumed</name>

@@ -78,7 +78,8 @@ es_sink::es_sink (
     : gr::sync_block (
         "es_sink",
         es_make_io_signature(insig.size(), insig),
-        gr::io_signature::make (MIN_OUT, MAX_OUT, 0)),
+        es_make_io_signature(insig.size(), insig)),
+        //gr::io_signature::make (MIN_OUT, MAX_OUT, 0)),
         n_threads(_n_threads),
         d_nevents(0),
         sample_history_in_kilosamples(_sample_history_in_kilosamples),
