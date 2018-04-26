@@ -98,6 +98,7 @@ es_sink::es_sink (
     // for upstream schedulers
     message_port_register_out(pmt::mp("nconsumed"));
     message_port_register_out(pmt::mp("pdu_event"));
+    message_port_register_out(pmt::mp("eb_msg"));
 
     // set up our special pdu handler
     event_queue->register_event_type("pdu_event");
